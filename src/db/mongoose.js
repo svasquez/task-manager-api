@@ -5,4 +5,5 @@ moongose.connect(connectionUrl, {
   useNewUrlParser: true,
   useCreateIndex: true,
   useFindAndModify : false
-});
+}).then(() => console.log('Connected to database'))
+.catch((e) => console.log('Database connection failed.', e));;
